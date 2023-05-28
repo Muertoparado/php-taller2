@@ -1,8 +1,13 @@
 <?php
+// Encontrar errores
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
 header("Content-Type: application/json"); 
 $_DATA = json_decode(file_get_contents("php://input"), true);
 $METHOD = $_SERVER["REQUEST_METHOD"];
-var_dump($_DATA);
 switch($METHOD) {
     case "POST":
     foreach($_DATA as $key => $value){
