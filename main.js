@@ -28,3 +28,18 @@ let ej2 = document.querySelector("#ejercicio2");
         let res = await (await fetch("model/api2.php", config)).text(); 
         document.querySelector("#ej2").innerHTML = res;
 })
+
+let ej6 = document.querySelector("#ejercicio6");
+    ej6.addEventListener("submit", async (e) => {
+        e.preventDefault(); 
+        let myHeaders = new Headers({ "Content-Type": "application/json" })
+        let data = Object.fromEntries(new FormData(e.target)); 
+        console.log(data);
+        let config = {
+            method: "POST",
+            headers: myHeaders,
+         //   body: JSON.stringify(data)
+        };
+        let res = await (await fetch("model/api6.php", config)).text(); 
+        document.querySelector("#ej6").innerHTML = res;
+})

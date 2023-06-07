@@ -24,7 +24,7 @@ switch($METHOD) {
 }
 function parImpar($num){
     if($num>=0){
-         if($num%2==0){
+        if($num%2==0){
             return 'par';
         }else{
             return 'impar';
